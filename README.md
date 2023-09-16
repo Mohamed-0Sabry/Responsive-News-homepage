@@ -18,8 +18,8 @@
 
 ### Links
 
-- Solution URL: [Solution](https://your-solution-url.com)
-- Live Site URL: [Live Site](https://your-live-site-url.com)
+- Solution URL: [Solution](https://www.frontendmentor.io/challenges/news-homepage-H6SWTa1MFl/hub?share=true)
+- Live Site URL: [Live Site](https://mohamed-0sabry.github.io/Responsive-News-homepage/)
 
 ## My process
 
