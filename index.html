@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | News homepage</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: {
+                softOrange: "hsl(35, 77%, 62%)",
+                softRed: "hsl(5, 85%, 63%)",
+              },
+              Neutral: {
+                Offwhite: "hsl(36, 100%, 99%)",
+                grayishBlue: "hsl(233, 8%, 79%)",
+                darkGrayishBlue: "hsl(236, 13%, 42%)",
+                veryDarkBlue: "hsl(240, 100%, 5%)",
+              },
+            },
+
+            fontFamily: {
+              inter: ["Inter", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-Neutral-Offwhite font-inter">
+    <div
+      class="SideMenu fixed bg-Neutral-darkGrayishBlue/50 h-[200vh] pl-60 flex w-full flex-col transition-all duration-200 invisible"
+      id="menuClose"
+    >
+      <div
+        class="anotherdiv bg-Neutral-Offwhite flex flex-col w-full pt-20 pe-10 ps-4 h-full"
+      >
+        <img
+          src="assets/images/icon-menu-close.svg"
+          alt="icon-menu-close"
+          class="w-fit cursor-pointer self-end"
+          id="closeMenuToggle"
+        />
+        <ul class="self-start flex flex-col gap-5 font-medium">
+          <li class="hover:text-primary-softRed cursor-pointer">Home</li>
+          <li class="hover:text-primary-softRed cursor-pointer">New</li>
+          <li class="hover:text-primary-softRed cursor-pointer">Popular</li>
+          <li class="hover:text-primary-softRed cursor-pointer">Trending</li>
+          <li class="hover:text-primary-softRed cursor-pointer">Categories</li>
+        </ul>
+      </div>
+    </div>
+    <div class="body p-20">
+      <header>
+        <!-- ! Start of the Nav Bar -->
+        <nav class="flex flex-row justify-between mb-10">
+          <img
+            src="assets/images/logo.svg"
+            alt="Logo"
+            class="logo cursor-pointer"
+          />
+          <img
+            src="assets/images/icon-menu.svg"
+            alt="icon-menu"
+            class="block lg:hidden"
+            id="menuOpen"
+          />
+          <ul
+            class="lg:flex flex-row gap-5 items-center text-lg text-Neutral-darkGrayishBlue hidden"
+          >
+            <li class="hover:text-primary-softRed cursor-pointer">Home</li>
+            <li class="hover:text-primary-softRed cursor-pointer">New</li>
+            <li class="hover:text-primary-softRed cursor-pointer">Popular</li>
+            <li class="hover:text-primary-softRed cursor-pointer">Trending</li>
+            <li class="hover:text-primary-softRed cursor-pointer">
+              Categories
+            </li>
+          </ul>
+        </nav>
+        <!-- ! End of the Nav Bar -->
+      </header>
+
+      <!-- !Start of the Main Section  -->
+      <main class="flex flex-col">
+        <!-- ? Start of the Upper Section Card Gridbox  -->
+        <div
+          class="mb-14 upperSection flex flex-col gap-8 lg:grid lg:grid-cols-3 lg:grid-rows-1 lg:gap-7"
+        >
+          <img
+            src="assets/images/image-web-3-desktop.jpg"
+            alt="image-web-3-mobile"
+            class="col-span-2"
+          />
+          <h1 class="text-6xl lg:order-1 font-extrabold">
+            The Bright Future of Web 3.0?
+          </h1>
+          <div
+            class="flex flex-col lg:justify-between lg:order-2 text-Neutral-darkGrayishBlue"
+          >
+            <p class="text-base mb-4">
+              We dive into the next evolution of the web that claims to put hte
+              power of the platforms back into the hands of the people, But is
+              it really fulfillig its promise?
+            </p>
+            <button
+              type="button"
+              role="button"
+              class="w-fit px-6 py-3 bg-primary-softRed uppercase text-sm text-Neutral-Offwhite font-semibold tracking-[.3rem] hover:bg-Neutral-veryDarkBlue transition-all duration-200"
+            >
+              read more
+            </button>
+          </div>
+
+          <!-- ? Right Section in the Upper Section with the @param of bg-Neutral-veryDarkBlue -->
+          <div
+            class="flex flex-col gap-6 justify-between rightSide row-span-2 bg-Neutral-veryDarkBlue text-Neutral-Offwhite p-8"
+          >
+            <h1 class="text-primary-softOrange text-6xl font-bold">New</h1>
+            <div class="card-section">
+              <h2
+                class="text-[1.4rem] font-bold mb-1.5 hover:text-primary-softOrange cursor-pointer"
+              >
+                Hydrogen VS Electric Cars
+              </h2>
+              <p class="text-Neutral-grayishBlue/80">
+                Will hydrogen-fueled cars ever catch up to EVs?
+              </p>
+            </div>
+            <hr class="my-1" />
+            <div class="card-section">
+              <h2
+                class="text-[1.4rem] font-bold mb-1.5 hover:text-primary-softOrange cursor-pointer"
+              >
+                The Downsides of AI Artistry
+              </h2>
+              <p class="text-Neutral-grayishBlue/80">
+                What are the possible adverse effects of on-demand AI image
+                generation?
+              </p>
+            </div>
+            <hr />
+            <div class="card-section">
+              <h2
+                class="text-[1.4rem] font-bold mb-1.5 hover:text-primary-softOrange cursor-pointer"
+              >
+                Is VC Funding Drying Up?
+              </h2>
+              <p class="text-Neutral-grayishBlue/80">
+                Provate fudning by VC firms is down 50% YOY. We take a look at
+                what that means.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- ? End of the Upper Section Card Gridbox  -->
+
+        <!-- ? Start of the Lower Section with 3 Images -->
+        <div
+          class="lowerSection flex flex-col gap-5 lg:grid lg:grid-cols-3 w-full lg:gap-7"
+        >
+          <div class="card gap-7 h-[50%] flex flex-row">
+            <img
+              src="assets/images/image-retro-pcs.jpg"
+              alt="image-retro-pcs"
+              class="max-lg:max-w-[50%] object-contain"
+            />
+            <div class="section flex flex-col justify-between">
+              <h1 class="text-4xl text-Neutral-grayishBlue font-bold">01</h1>
+              <h2
+                class="text-[1.2rem] font-bold hover:text-primary-softRed cursor-pointer"
+              >
+                Reviving Retro PCs
+              </h2>
+              <p class="text-Neutral-darkGrayishBlue text-[.9rem] font-medium">
+                What happens when old PCs are giver modern upgrades?
+              </p>
+            </div>
+          </div>
+          <div class="card gap-7 h-[50%] flex flex-row">
+            <img
+              src="assets/images/image-top-laptops.jpg"
+              alt="image-top-laptops"
+              class="max-lg:max-w-[50%] object-contain"
+            />
+            <div class="section flex flex-col justify-between">
+              <h1 class="text-4xl text-Neutral-grayishBlue font-bold">02</h1>
+              <h2
+                class="text-[1.2rem] font-bold hover:text-primary-softRed cursor-pointer"
+              >
+                Top 10 Laptops of 2022
+              </h2>
+              <p class="text-Neutral-darkGrayishBlue text-[.9rem] font-medium">
+                Our best picks for various need and budgets.
+              </p>
+            </div>
+          </div>
+          <div class="card gap-7 h-[50%] flex flex-row">
+            <img
+              src="assets/images/image-gaming-growth.jpg"
+              alt="image-gaming-growth"
+              class="max-lg:max-w-[50%] object-contain"
+            />
+            <div class="section flex flex-col justify-between">
+              <h1 class="text-4xl text-Neutral-grayishBlue font-bold">03</h1>
+              <h2
+                class="text-[1.1rem] font-bold hover:text-primary-softRed cursor-pointer"
+              >
+                The Growth of Gaming
+              </h2>
+              <p class="text-Neutral-darkGrayishBlue text-[.9rem] font-medium">
+                How the pandemic has sparked fresh opportunities
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- ? Emd of the Lower Section with 3 Images -->
+      </main>
+      <!-- !End of the Main Section  -->
+
+      <footer class="mt-10 lg:grid-cols-3 text-sm">
+        <div class="attribution">
+          Challenge by
+          <a
+            href="https://www.frontendmentor.io?ref=challenge"
+            rel="noopener"
+            target="_blank"
+            class="text-Neutral-darkGrayishBlue hover:text-primary-softRed"
+            >Frontend Mentor</a
+          >. Coded by
+          <a
+            href="https://www.linkedin.com/in/mohamed-sabry-eng/"
+            class="text-Neutral-darkGrayishBlue hover:text-primary-softRed"
+            >Mohamed Sabry</a
+          >.
+        </div>
+      </footer>
+    </div>
+  </body>
+
+  <script>
+    const menuOpen = document.querySelector("#menuOpen");
+    const menuClose = document.querySelector("#menuClose");
+    const closeMenuToggle = document.querySelector("#closeMenuToggle");
+    menuOpen.addEventListener("click", () => {
+      console.log("Clicked on menuOpen");
+      menuClose.classList.toggle("invisible");
+    });
+    closeMenuToggle.addEventListener("click", () => {
+      menuClose.classList.toggle("invisible");
+    });
+  </script>
+</html>
+
+<!-- ! See you Later,  -->
+s
